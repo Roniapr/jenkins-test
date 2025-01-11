@@ -16,6 +16,12 @@ pipeline {
                 sh "chmod +x -R ${env.WORKSPACE}"
                 sh './jenkins/scripts/test.sh' 
             }
-        }    
+        }
+         stage('Deliver') { 
+            steps {
+                sh "chmod +x -R ${env.WORKSPACE}"
+                sh './jenkins/scripts/test.sh' 
+            }
+        }   
     }
 }
